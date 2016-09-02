@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha"
+    "test": "mocha --recursive"
   },
   "dependencies": {
+    "body-parser": "^1.15.2",
     "debug": "*",
     "express": "*",
+    "mongoose": "^4.5.8",
+    "q": "^1.4.1",
     "request": "*",
     "tingyun": "*"
   },

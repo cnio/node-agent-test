@@ -1,10 +1,12 @@
 var expect = require('chai').expect;
 var request = require('request');
+var config = require('../../../config');
+var url = config.host + ':' + config.port;
 
-describe('index', function() {
-	it('should return index', function(done) {
-		request('http://127.0.0.1:3000', function(err, res, body) {
-			expect(body).to.be.equal('index');
+describe('MongoDB', function() {
+	it('should return mongodb string', function(done) {
+		request(url + '/mongodb', function(err, res, data) {
+			expect(data).to.be.equal('NodeJS/NULL/%2Fmongodb');
 			done();
 		})
 	})
