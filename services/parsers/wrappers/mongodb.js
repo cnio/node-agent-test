@@ -10,9 +10,6 @@ module.exports = function saveUser(cb) {
 		if (error) {
 			return console.log(error)
 		}
-		// console.log(123456)
-		// console.log(data)
-		// console.log(123456)
 		return cb(null, data);
 	})
 };

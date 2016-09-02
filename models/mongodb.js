@@ -12,8 +12,8 @@ var UserSchema = new Schema({
     }
 });
 
-UserSchema.statics.findUserByName = function(name, cb) {
-    return this.find({username: name}).exec(cb);
-};
+// UserSchema.statics.findUserByName = function(name, cb) {
+//     return this.find({username: name}).exec(cb);
+// };
 
 module.exports = mongoose.model('User', UserSchema);
