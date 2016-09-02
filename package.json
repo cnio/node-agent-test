@@ -12,6 +12,7 @@
     "express": "*",
     "ioredis": "^2.3.0",
     "mongoose": "^4.5.8",
+    "mysql": "^2.11.1",
     "q": "^1.4.1",
     "redis": "^2.6.2",
     "request": "*",
