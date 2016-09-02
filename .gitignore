@@ -31,3 +31,6 @@ npm-debug.log
 
 # tingyun
 tingyun.json
+
+# other
+dump.rdb

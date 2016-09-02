@@ -1,8 +1,8 @@
 var redis = require('../../../dbs/ioredis');
 
 module.exports = function(cb) {
-    var key = 'ting' + Date.now();
-    var value = 'yun' + Date.now();
+    var key = 'ioredis' + Date.now();
+    var value = 'ioredis' + Date.now();
     redis.set(key, value);
     redis.get(key, function (err, result) {
         if (!err) {

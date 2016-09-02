@@ -46,20 +46,24 @@ app.use('/ioredis', function(req, res, next) {
     })
 });
 
-app.use('/redis', function(req, res, next) {
-    Q.nfcall(wrappers.redis).then(function(data) {
-        if (!data) {
-            res.send({
-                status: 'failed'
-            })
-        };
-        var action_data = tingyun.getAction();
-        if (action_data) {
-            //console.log(action_data.webSegment.name)
-            res.send(action_data.webSegment.name)
-        }
-    }).catch(function(e) {
-        console.log(e)
-    })
-});
+// app.use('/redis', function(req, res, next) {
+//     Q.nfcall(wrappers.redis).then(function(data) {
+//         if (!data) {
+//             res.send({
+//                 status: 'failed'
+//             })
+//         };
+//         console.log('data', data)
+//         var action_data = tingyun.getAction();
+//         console.log(action_data)
+//         if (action_data) {
+
+//             console.log(action_data.webSegment.name)
+//             res.send(action_data.webSegment.name)
+//         }
+//     }).catch(function(e) {
+//         console.log(e)
+//     })
+// });
+
 module.exports = app;

@@ -15,6 +15,6 @@ var config = require('../config');
 // })
 
 
-var redis = new Redis(6379, '127.0.0.1')  
+var redis = new Redis();
 
 module.exports = redis;
