@@ -16,7 +16,10 @@ module.exports = {
 			user: 'root',
 			password: 'toor',
 			database: 'test'
+		},
+		memcached: {
+			host: '127.0.0.1',
+			port: 11211 
 		}
-
 	}
 };

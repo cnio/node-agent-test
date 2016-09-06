@@ -21,7 +21,7 @@ mongoose.connect(connectionString, options, function(err, res) {
 
 var db = mongoose.connection;
 db.once('open', function() {
-  return console.log('MongoDB is running.');
+  return console.log('MongoDB is running');
 });
 
 module.exports = db;
