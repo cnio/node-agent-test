@@ -53,23 +53,9 @@ app.use('/ioredis', function(req, res, next) {
 });
 
 app.use('/redis', function(req, res, next) {
-    Q.nfcall(wrappers.redis).then(function(data) {
-        if (!data) {
-            res.send({
-                status: 'failed'
-            })
-        };
-        console.log('data', data)
-        var action_data = tingyun.getAction();
-        console.log(action_data)
-        if (action_data) {
-
-            console.log(action_data.webSegment.name)
-            res.send(action_data.webSegment.name)
-        }
-    }).catch(function(e) {
-        console.log(e)
-    })
+    qPromise(wrappers.redis, function(err, ret) {
+        res.json(ret);
+    });
 });
 
 app.use('/mysql', function(req, res, next) {
